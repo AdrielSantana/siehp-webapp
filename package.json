@@ -9,7 +9,12 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "docker:up": "docker compose up --build -d",
+    "docker:down": "docker compose down",
+    "docker:restart": "docker compose restart",
+    "docker:logs": "docker compose logs -f",
+    "docker:rebuild": "npm run docker:down && npm run docker:up"
   },
   "dependencies": {
     "@vercel/analytics": "^1.1.1",
