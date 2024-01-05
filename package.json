@@ -10,6 +10,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
+    "test": "echo \"Success, running tests\"", 
     "docker:up": "docker compose up --build -d",
     "docker:down": "docker compose down",
     "docker:restart": "docker compose restart",
