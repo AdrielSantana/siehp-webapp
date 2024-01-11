@@ -1,9 +1,11 @@
 {
   "name": "siehp-webapp",
+  "description": "Interface de programação para a aplicação do Sistema Integrado de Ensino a Histologia e Patologia",
   "author": {
     "name": "Siehp"
   },
-  "version": "0.1.0",
+  "license": "MIT",
+  "version": "0.0.1",
   "private": true,
   "scripts": {
     "dev": "next dev",
