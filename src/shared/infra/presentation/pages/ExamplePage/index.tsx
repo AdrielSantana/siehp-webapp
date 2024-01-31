@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import React from "react";
-import siehpLogo from "@/presentation/assets/images/siehp_logo.png";
+import siehpLogo from "@/shared/infra/presentation/assets/images/siehp_logo.png";
 import { useExample } from "@/shared/infra/services/hooks/useExample";
 import { ExampleComponent } from "@/shared/infra/presentation/components/ExampleComponent";
 
