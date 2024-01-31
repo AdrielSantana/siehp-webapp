@@ -1,43 +1,43 @@
-import React from 'react'
-import { ExampleComponentRootProps, ExampleComponentTitleProps } from './types'
+import React from "react";
+import { ExampleComponentRootProps, ExampleComponentTitleProps } from "./types";
 
 const ExampleComponentRoot = ({
-    children,
-    className,
-    ...props
+  children,
+  className,
+  ...props
 }: ExampleComponentRootProps) => {
   return (
-    <div 
-    className={
-    // Adicionar estilização tailwind aqui
-    `${className}`
-    } 
-    {...props}
+    <div
+      className={
+        // Adicionar estilização tailwind aqui
+        `${className}`
+      }
+      {...props}
     >
       {children}
     </div>
-  )
-}
+  );
+};
 
 const ExampleComponentTitle = ({
-    children,
-    className,
-    ...props
+  children,
+  className,
+  ...props
 }: ExampleComponentTitleProps) => {
   return (
     <h1
-    className={
+      className={
         // Adicionar estilização tailwind aqui
         `${className}`
-        } 
-        {...props}
+      }
+      {...props}
     >
       {children}
     </h1>
-  )
-}
+  );
+};
 
 export const ExampleComponent = {
-    Root: ExampleComponentRoot,
-    Title: ExampleComponentTitle
-}
+  Root: ExampleComponentRoot,
+  Title: ExampleComponentTitle,
+};

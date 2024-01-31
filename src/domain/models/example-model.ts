@@ -1,3 +1,3 @@
-    export interface ExampleModel {
-        exampleModelAttribute: string
-    }
+export interface ExampleModel {
+  exampleModelAttribute: string;
+}
