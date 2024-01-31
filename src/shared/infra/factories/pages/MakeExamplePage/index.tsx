@@ -1,5 +1,4 @@
-import ExamplePage from "@/app/example/page"
-
+import ExamplePage from "@/shared/infra/presentation/pages/ExamplePage"
 
 const MakeExamplePage = () => {
   return (
