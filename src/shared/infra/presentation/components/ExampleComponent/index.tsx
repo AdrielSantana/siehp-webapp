@@ -1,4 +1,3 @@
-import React from "react";
 import { ExampleComponentRootProps, ExampleComponentTitleProps } from "./types";
 
 const ExampleComponentRoot = ({
