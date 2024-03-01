@@ -17,7 +17,7 @@ const Header = () => {
   });
 
   return (
-    <header>
+    <header className="bg-header" >
       <Link href={PAGES.HOME_PAGE.link}>
         <Image
           src={completeSIEHPLogoImg.src}

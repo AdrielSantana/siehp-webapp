@@ -5,7 +5,7 @@ import completeSIEHPLogoImg from "@/shared/infra/presentation/assets/images/comp
 
 const Footer = () => {
   return (
-    <footer>
+    <footer className="bg-footer">
       <p>
         Sistema Integrado de Ensino à Histologia e Patologia 2024 © Todos os
         direitos reservados.

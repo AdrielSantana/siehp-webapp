@@ -7,7 +7,7 @@ import githubIcon from "@/shared/infra/presentation/assets/images/github_icon.sv
 const WorkInProgressPage = () => {
   return (
     <main>
-      <h1>Estamos em construção</h1>
+      <h1 className="absolute flex justify-center">Estamos em construção</h1>
       <div>
         {WORK_IN_PROGRESS_ICONS.map((icon, idx) => {
           const { alt, img } = icon;
