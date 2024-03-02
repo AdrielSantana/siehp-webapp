@@ -52,7 +52,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: "SIEHP",
-    images: ["/favicon/opengraph-image.png"],
+    images: ["/og/opengraph-image.png"],
     description: "Sistema Integrado de Ensino à Histologia e Patologia",
     type: "website",
     locale: "pt_BR",
@@ -60,7 +60,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     title: "SIEHP",
-    images: ["/favicon/twitter-image.png"],
+    images: ["/og/twitter-image.png"],
     description: "Sistema Integrado de Ensino à Histologia e Patologia",
   },
 };
