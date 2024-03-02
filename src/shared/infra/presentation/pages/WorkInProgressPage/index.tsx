@@ -1,40 +1,38 @@
-import { WORK_IN_PROGRESS_ICONS } from "@/shared/infra/utils/constants/work-in-progress-icons";
-import Image from "next/image";
 import React from "react";
-
-import githubIcon from "@/shared/infra/presentation/assets/images/github_icon.svg";
+import {
+  AlertIcon,
+  ExperimentIcon,
+  GithubIcon,
+  HourglassIcon,
+  PlugIcon,
+  SmileIcon,
+} from "../../components/Icons";
+import Link from "next/link";
+import { GITHUB_LINK } from "@/shared/infra/utils/constants";
 
 const WorkInProgressPage = () => {
   return (
-    <main>
-      <h1 className="absolute flex justify-center">Estamos em construção</h1>
-      <div>
-        {WORK_IN_PROGRESS_ICONS.map((icon, idx) => {
-          const { alt, img } = icon;
-          const { height, src, width } = img;
-
-          return (
-            <Image
-              key={`${icon.alt}-${idx}`}
-              src={src}
-              alt={alt}
-              height={height}
-              width={width}
-            />
-          );
-        })}
+    <main className="gap flex flex-grow flex-col items-center justify-center gap-4 bg-gray-100-tk px-2 py-5 md:px-4">
+      <h1 className="text-center text-xl font-bold text-gray-900-tk">
+        Estamos em construção
+      </h1>
+      <div className="flex flex-row flex-wrap items-center justify-center gap-2">
+        <SmileIcon className="[&>path]:fill-gray-700-tk" />
+        <HourglassIcon className="[&>path]:fill-gray-700-tk" />
+        <PlugIcon className="[&>path]:fill-gray-700-tk" />
+        <AlertIcon className="[&>path]:fill-gray-700-tk" />
+        <ExperimentIcon className="[&>path]:fill-gray-700-tk" />
       </div>
-      <div>
-        <span>
-          <Image
-            src={githubIcon}
-            alt={githubIcon.alt}
-            height={githubIcon.height}
-            width={githubIcon.width}
-          />
-          <p>Acompanhe nosso projeto!</p>
-        </span>
-      </div>
+      <Link
+        href={GITHUB_LINK}
+        target="_blank"
+        className="mt-2 flex flex-row flex-wrap items-center justify-center gap-1"
+      >
+        <GithubIcon className="[&>path]:fill-gray-700-tk" />
+        <p className="text-center text-lg font-semi-bold text-gray-900-tk">
+          Acompanhe nosso projeto!
+        </p>
+      </Link>
     </main>
   );
 };

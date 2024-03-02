@@ -17,17 +17,18 @@ const Header = () => {
   });
 
   return (
-    <header className="bg-header" >
+    <header className="flex flex-row items-center justify-between gap-3 bg-gray-700 px-2 py-1.5 md:px-4">
       <Link href={PAGES.HOME_PAGE.link}>
         <Image
+          priority
           src={completeSIEHPLogoImg.src}
           alt="SIEHP. Sistema Integrado de Ensino à Histologia e Patologia. Logo completo."
           height={completeSIEHPLogoImg.height}
           width={completeSIEHPLogoImg.width}
         />
       </Link>
-      <nav>
-        <ul>
+      <nav className="hidden md:block">
+        <ul className="flex flex-row gap-x-3 text-lg font-semi-bold text-gray-100">
           {navbarLinks.map((navbarLink, idx) => {
             const { label, link } = navbarLink;
             return (

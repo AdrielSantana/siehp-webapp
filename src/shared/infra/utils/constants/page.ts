@@ -13,4 +13,7 @@ export const PAGES: {
   },
 };
 
-export const LANDING_PAGE_NAVBAR_LINKS: (keyof typeof PagesEnum)[] = [];
+export const LANDING_PAGE_NAVBAR_LINKS: (keyof typeof PagesEnum)[] = [
+  // "HELP",
+  // "HOME_PAGE",
+];
