@@ -1,2 +1,1 @@
-export * from './remote-example-usecase'
-export * from './remote-auth'
+export * from "./remote-example-usecase";

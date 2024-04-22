@@ -4,9 +4,9 @@ import Image from "next/image";
 import siehpLogo from "@/shared/infra/presentation/assets/images/siehp_logo.png";
 import { useExample } from "@/shared/infra/services/hooks/useExample";
 import { ExampleComponent } from "@/shared/infra/presentation/components/ExampleComponent";
-import { useAuthStore } from "@/shared/infra/services/stores/auth-store";
+import { useAuthStore } from "@/modules/user/infra/services/stores/auth-store";
 import { useEffect } from "react";
-import { RemoteAuth } from "@/shared/infra/services/data/usecases";
+import { RemoteAuth } from "@/modules/user/infra/services/data/usecases";
 
 const ExamplePage = ({}) => {
   const { example } = useExample();
