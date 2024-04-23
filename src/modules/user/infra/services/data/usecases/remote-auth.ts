@@ -33,8 +33,6 @@ export class RemoteAuth implements Auth {
       },
     };
 
-    throw new Error("Deu erro pai");
-
     const error = checkApiError({
       data: httpResponse.data,
       schema: AuthUserResponseSchema,
