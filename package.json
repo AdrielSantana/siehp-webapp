@@ -20,6 +20,7 @@
     "docker:rebuild": "npm run docker:down && npm run docker:up"
   },
   "dependencies": {
+    "@radix-ui/react-form": "^0.0.3",
     "@vercel/analytics": "^1.1.1",
     "@vercel/speed-insights": "^1.0.2",
     "axios": "^1.6.7",
