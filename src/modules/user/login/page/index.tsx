@@ -3,66 +3,82 @@
 import React from "react";
 import * as Form from "@radix-ui/react-form";
 
-
-const LoginPage = () => (
-  <div style={{backgroundColor: "#1E1E1E", color: "#fff", minHeight: "722px", display: "flex", alignItems: "center", padding: "0 32px"}}>
-    <div style={{maxWidth: 537}}>
-      <h1 style={{fontWeight: 700, fontSize: "2rem", marginBottom: "25px", lineHeight: "38px"}}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</h1>
-      <p style={{fontWeight: 500, fontSize: "1.25rem"}}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor</p>
-    </div>
-    <Form.Root className="w-[260px]" style={{padding: "0 32px"}}>
-      <Form.Field className="mb-[10px] grid" name="email">
-        <div className="flex items-baseline justify-between">
-          <Form.Label className="font-medium text-white text-[15px] leading-[35px]">
-            Email
-          </Form.Label>
-          <Form.Message
-            className="text-white text-[13px] opacity-[0.8]"
-            match="valueMissing"
-          >
-            Please enter your email
-          </Form.Message>
-          <Form.Message
-            className="text-white text-[13px] opacity-[0.8]"
-            match="typeMismatch"
-          >
-            Please provide a valid email
-          </Form.Message>
-        </div>
-        <Form.Control asChild>
-          <input
-            className="bg-blackA2 shadow-blackA6 text-white selection:color-white selection:bg-blackA6 box-border inline-flex h-[35px] w-full appearance-none items-center justify-center rounded-[4px] px-[10px] text-[15px] leading-none shadow-[0_0_0_1px] outline-none hover:shadow-[0_0_0_1px_black] focus:shadow-[0_0_0_2px_black]"
-            type="email"
-            required
-          />
-        </Form.Control>
-      </Form.Field>
-      <Form.Field className="mb-[10px] grid" name="question">
-        <div className="flex items-baseline justify-between">
-          <Form.Label className="font-medium text-white text-[15px] leading-[35px]">
-            Question
-          </Form.Label>
-          <Form.Message
-            className="text-white text-[13px] opacity-[0.8]"
-            match="valueMissing"
-          >
-            Please enter a question
-          </Form.Message>
-        </div>
-        <Form.Control asChild>
-          <textarea
-            className="bg-blackA2 shadow-blackA6 text-white selection:color-white selection:bg-blackA6 box-border inline-flex w-full resize-none appearance-none items-center justify-center rounded-[4px] p-[10px] text-[15px] leading-none shadow-[0_0_0_1px] outline-none hover:shadow-[0_0_0_1px_black] focus:shadow-[0_0_0_2px_black]"
-            required
-          />
-        </Form.Control>
-      </Form.Field>
-      <Form.Submit asChild>
-        <button className="text-violet11 shadow-blackA4 hover:bg-mauve3 bg-white font-medium focus:shadow-black mt-[10px] box-border inline-flex h-[35px] w-full items-center justify-center rounded-[4px] px-[15px] leading-none shadow-[0_2px_10px] focus:shadow-[0_0_0_2px] focus:outline-none">
-          Post question
-        </button>
-      </Form.Submit>
-    </Form.Root>
-  </div>
-);
+const LoginPage = () => {
+  return (
+    <main className="gap flex flex-grow flex-col items-center justify-center gap-4 bg-gray-100-tk px-2 py-5 md:px-4">
+      <div className="min-h-[300px] w-[100%] max-w-[537px] rounded-[8px] bg-gray-300-tk px-[32px] py-[64px]">
+        <Form.Root>
+          <fieldset className="mx-auto mb-[47px] max-w-[245px] text-lg text-gray-900-tk">
+            Insira suas credências
+            <small className="block text-sm text-warning">
+              *Campos Obrigatóios
+            </small>
+          </fieldset>
+          <Form.Field className="mb-[10px] grid" name="email">
+            <Form.Label
+              className="text-left text-lg text-gray-900-tk"
+              htmlFor="email"
+            >
+              E-mail<span className="text-warning">*</span>
+            </Form.Label>
+            <Form.Control asChild>
+              <input
+                id="email"
+                className="rounded px-[10px] py-[6px]"
+                type="email"
+                required
+                placeholder="Insira seu e-mail"
+              />
+            </Form.Control>
+            <Form.Message
+              className="text-right text-md text-fail opacity-[0.8]"
+              match="typeMismatch"
+            >
+              Por favor, insira um e-mail válido
+            </Form.Message>
+            <Form.Message
+              className="text-right text-md text-fail opacity-[0.8]"
+              match="valueMissing"
+            >
+              Por favor, insira um e-mail
+            </Form.Message>
+          </Form.Field>
+          <Form.Field className="mb-[83px] grid" name="password">
+            <Form.Label
+              className="text-left text-lg text-gray-900-tk"
+              htmlFor="password"
+            >
+              Senha<span className="text-warning">*</span>
+            </Form.Label>
+            <Form.Control asChild>
+              <input
+                id="password"
+                className="rounded px-[10px] py-[6px]"
+                type="password"
+                required
+                placeholder="Insira sua senha"
+              />
+            </Form.Control>
+            <a href="" className="text-gray-900-tk mt-[7px]">
+              Esqueci minha senha
+            </a>
+            <Form.Message
+              className="text-right text-md text-fail opacity-[0.8]"
+              match="valueMissing"
+            >
+              Por favor, insira uma senha
+            </Form.Message>
+          </Form.Field>{" "}
+          <Form.Submit asChild>
+            <button className="mx-[auto] block w-[100%] max-w-[229px] rounded bg-gray-900-tk p-[19px] text-lg text-gray-100-tk">
+              Entrar na conta
+            </button>
+          </Form.Submit>
+        </Form.Root>
+        <a href="" className="text-gray-900-tk text-center block mt-[8px]">Não possuo uma conta</a>
+      </div>
+    </main>
+  );
+};
 
 export default LoginPage;
