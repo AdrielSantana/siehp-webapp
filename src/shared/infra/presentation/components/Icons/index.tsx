@@ -4,7 +4,8 @@ import { default as GithubIcon } from "@/shared/infra/presentation/assets/images
 import { default as HourglassIcon } from "@/shared/infra/presentation/assets/images/hourglass_icon.svg";
 import { default as PlugIcon } from "@/shared/infra/presentation/assets/images/plug_icon.svg";
 import { default as SmileIcon } from "@/shared/infra/presentation/assets/images/smile_icon.svg";
-
+import { default as GearIcon } from "@/shared/infra/presentation/assets/images/gear_icon.svg";
+import {default as ChevronArrowIcon} from '@/shared/infra/presentation/assets/images/chevron_arrow_icon.svg'
 export {
   AlertIcon,
   ExperimentIcon,
@@ -12,4 +13,6 @@ export {
   HourglassIcon,
   PlugIcon,
   SmileIcon,
+  GearIcon,
+  ChevronArrowIcon
 };

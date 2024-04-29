@@ -17,7 +17,7 @@ const roboto = Roboto({
 const AppLayout = ({ children }: AppLayoutProps) => {
   return (
     <html lang="pt-br" data-theme="normal">
-      <body className={`${roboto.className}`}>
+      <body className={`[&>*::-webkit-scrollbar]:w-3 min-h-dvh relative ${roboto.className}`}>
         {children}
         <ErrorAlert />
         <Analytics />
