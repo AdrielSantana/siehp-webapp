@@ -1,4 +1,5 @@
+import AuthenticatedLayout from "../layout";
 
 export default function AdminPage() {
-  return <div>admin</div>;
+  return <AuthenticatedLayout>admin</AuthenticatedLayout>;
 }
