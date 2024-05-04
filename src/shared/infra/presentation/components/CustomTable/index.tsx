@@ -2,11 +2,10 @@ import * as React from "react"
 
 import { TableRootProps, TableBodyProps, TableCaptionProps, TableCellProps, TableFooterProps, TableHeadProps, TableHeaderProps, TableRowProps } from "./types"
 
-const CustomTableRoot = ({children, ref, className, ...props}: TableRootProps) => {
+const CustomTableRoot = ({children, className, ...props}: TableRootProps) => {
     return (
         <div className="relative w-full overflow-auto">
         <table
-          ref={ref}
           className={`w-full caption-bottom text-sm ${className ?? ""}`}
           {...props}
         >{children}</table>
@@ -15,17 +14,17 @@ const CustomTableRoot = ({children, ref, className, ...props}: TableRootProps) =
 
 }
 
-const CustomTableHeader = ({children, className, ref, ...props}: TableHeaderProps)=> {
+const CustomTableHeader = ({children, className, ...props}: TableHeaderProps)=> {
     return (
-<thead ref={ref} className={`[&_tr]:border-b ${className ??""}`} {...props}>
+<thead className={`[&_tr]:border-b ${className ??""}`} {...props}>
     {children}
 </thead>
     )
 }
 
-const CustomTableBody = ({children, className, ref, ...props}: TableBodyProps)=>{
+const CustomTableBody = ({children, className, ...props}: TableBodyProps)=>{
     return (<tbody
-        ref={ref}
+
         className={`[&_tr:last-child]:border-0 ${className ??""}`}
         {...props}
       >
@@ -33,9 +32,8 @@ const CustomTableBody = ({children, className, ref, ...props}: TableBodyProps)=>
       </tbody>)
 }
 
-const CustomTableFooter = ({children, className, ref, ...props}: TableFooterProps)=>{
+const CustomTableFooter = ({children, className, ...props}: TableFooterProps)=>{
     return (  <tfoot
-        ref={ref}
         className={`border-t bg-muted/50 font-medium [&>tr]:last:border-b-0 ${className ??""}`}
         {...props}
       >
@@ -43,10 +41,9 @@ const CustomTableFooter = ({children, className, ref, ...props}: TableFooterProp
       </tfoot>)
 }
 
-const CustomTableRow = ({children, className, ref, ...props}: TableRowProps)=>{
+const CustomTableRow = ({children, className, ...props}: TableRowProps)=>{
     return(
         <tr
-        ref={ref}
         className={`border-b transition-colors hover:bg-muted/50 data-[state=selected]:bg-muted ${className ??""}`}
         {...props}
       >
@@ -55,10 +52,9 @@ const CustomTableRow = ({children, className, ref, ...props}: TableRowProps)=>{
     )
 }
 
-const CustomTableHead = ({children, ref, className, ...props}: TableHeadProps)=>{
+const CustomTableHead = ({children, className, ...props}: TableHeadProps)=>{
     return(
 <th
-    ref={ref}
     className={`h-10 px-2 text-left align-middle font-medium text-muted-foreground [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px] ${className ??""}`}
     {...props}
   >
@@ -67,10 +63,9 @@ const CustomTableHead = ({children, ref, className, ...props}: TableHeadProps)=>
     )
 }
 
-const CustomTableCell = ({children, className, ref, ...props}: TableCellProps) =>{
+const CustomTableCell = ({children, className, ...props}: TableCellProps) =>{
     return(
 <td
-    ref={ref}
     className={`p-2 align-middle [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px] ${className ??""}`}
     {...props}
   >{children}
@@ -78,10 +73,10 @@ const CustomTableCell = ({children, className, ref, ...props}: TableCellProps) =
     )
 }
 
-const CustomTableCaption = ({children, className, ref, ...props}: TableCaptionProps)=>{
+const CustomTableCaption = ({children, className, ...props}: TableCaptionProps)=>{
+ 
     return(
 <caption
-    ref={ref}
     className={`mt-4 text-sm text-muted-foreground ${className ??""}`}
     {...props}
   >

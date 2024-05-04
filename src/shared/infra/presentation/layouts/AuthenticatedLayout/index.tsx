@@ -65,7 +65,10 @@ const AuthenticatedLayout = ({ children }: AuthenticatedLayoutProps) => {
         </SideBar.ItemContainer>
         <SideBar.Footer userName={"fulano"} userRole={"pica"} />
       </SideBar.Root>
+      <div className="ml-[380px]">
       {children}
+      </div>
+      
     </>
   );
 };

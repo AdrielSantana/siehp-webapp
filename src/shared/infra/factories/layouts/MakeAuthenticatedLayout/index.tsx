@@ -4,11 +4,11 @@ import AuthenticatedLayout from '@/shared/infra/presentation/layouts/Authenticat
 
 const MakeAuthenticatedLayout = ({children}: MakeAuthenticatedLayoutProps) => {
   return (
-    <div>
+    <>
       <AuthenticatedLayout>
         {children}
       </AuthenticatedLayout>
-    </div>
+    </>
   )
 }
 
