@@ -6,6 +6,8 @@ import { default as PlugIcon } from "@/shared/infra/presentation/assets/images/p
 import { default as SmileIcon } from "@/shared/infra/presentation/assets/images/smile_icon.svg";
 import { default as GearIcon } from "@/shared/infra/presentation/assets/images/gear_icon.svg";
 import {default as ChevronArrowIcon} from '@/shared/infra/presentation/assets/images/chevron_arrow_icon.svg'
+import {default as SearchIcon} from '@/shared/infra/presentation/assets/images/search_icon.svg';
+import {default as AddPeopleIcon} from '@/shared/infra/presentation/assets/images/add_people_icon.svg';
 export {
   AlertIcon,
   ExperimentIcon,
@@ -14,5 +16,7 @@ export {
   PlugIcon,
   SmileIcon,
   GearIcon,
-  ChevronArrowIcon
+  ChevronArrowIcon,
+  SearchIcon,
+  AddPeopleIcon
 };

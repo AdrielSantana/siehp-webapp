@@ -23,3 +23,7 @@ export interface AdminPagesHeaderFilterProps extends React.HtmlHTMLAttributes<HT
 export interface AdminPagesHeaderButtonContentProps extends React.HtmlHTMLAttributes<HTMLDivElement>{
     children: React.ReactNode
 }
+
+export interface AdminPagesHeaderBodyProps extends React.HtmlHTMLAttributes<HTMLDivElement>{
+    children: React.ReactNode
+}

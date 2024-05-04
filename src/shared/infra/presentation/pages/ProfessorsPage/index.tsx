@@ -2,7 +2,7 @@
 
 import { AdminPagesHeader } from "../../components/AdminPagesHeader";
 import { CustomTable } from "../../components/CustomTable";
-import { AlertIcon, ChevronArrowIcon } from "../../components/Icons";
+import { AddPeopleIcon } from "../../components/Icons";
 
 const ProfessorPage = ({}) => {
   return (
@@ -11,15 +11,17 @@ const ProfessorPage = ({}) => {
             <AdminPagesHeader.Title>
                 Professores
             </AdminPagesHeader.Title>
+            <AdminPagesHeader.Body>
             <AdminPagesHeader.ButtonContent>
                 <AdminPagesHeader.ButtonIcon>
-                    <AlertIcon className={`[&>path]:fill-gray-300`} viewBox="0 0 24 24" width={24} height={24}/>
+                    <AddPeopleIcon className={`[&>path]:fill-gray-900-tk`} />
                 </AdminPagesHeader.ButtonIcon>
                 <AdminPagesHeader.Button>
                     Adicionar Professor
                 </AdminPagesHeader.Button>
             </AdminPagesHeader.ButtonContent>
             <AdminPagesHeader.Filter/>
+            </AdminPagesHeader.Body>
         </AdminPagesHeader.Root>
 
         <CustomTable.Root >
