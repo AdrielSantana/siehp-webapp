@@ -26,27 +26,31 @@ const LoginPage = () => {
             >
               E-mail<span className="text-warning font-semi-bold">*</span>
             </Form.Label>
-            <Form.Control asChild>
-              <input
-                id="email"
-                className="rounded px-[10px] py-[6px] h-[50px] text-md"
-                type="email"
-                required
-                placeholder="Insira seu e-mail"
-              />
-            </Form.Control>
-            <Form.Message
-              className="text-right text-md text-fail opacity-[0.8]"
-              match="typeMismatch"
-            >
-              Por favor, insira um e-mail válido
-            </Form.Message>
-            <Form.Message
-              className="text-right text-md text-fail opacity-[0.8]"
-              match="valueMissing"
-            >
-              Por favor, insira um e-mail
-            </Form.Message>
+            <div className="relative">
+              <Form.Control asChild>
+                <input
+                  id="email"
+                  className="rounded px-[10px] py-[6px] h-[50px] w-[100%] text-md mb-[30px]"
+                  type="email"
+                  required
+                  placeholder="Insira seu e-mail"
+                />
+              </Form.Control>
+              <Form.Message
+                className="absolute text-right text-md text-fail opacity-[0.8] w-max"
+                match="typeMismatch"
+                style={{ bottom: 0, right: 0 }}
+              >
+                Por favor, insira um e-mail válido
+              </Form.Message>
+              <Form.Message
+                className="absolute text-right text-md text-fail opacity-[0.8] w-max"
+                match="valueMissing"
+                style={{ bottom: 0, right: 0 }}
+              >
+                Por favor, insira um e-mail
+              </Form.Message>
+            </div>
           </Form.Field>
           <Form.Field className="mb-2 xl:mb-[83px] grid" name="password">
             <Form.Label
