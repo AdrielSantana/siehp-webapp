@@ -8,6 +8,10 @@ import { default as GearIcon } from "@/shared/infra/presentation/assets/images/g
 import {default as ChevronArrowIcon} from '@/shared/infra/presentation/assets/images/chevron_arrow_icon.svg'
 import {default as SearchIcon} from '@/shared/infra/presentation/assets/images/search_icon.svg';
 import {default as AddPeopleIcon} from '@/shared/infra/presentation/assets/images/add_people_icon.svg';
+import {default as TopDownArrowIcon} from '@/shared/infra/presentation/assets/images/top_down_arrow_icon.svg';
+import {default as ThreeDotsIcon} from '@/shared/infra/presentation/assets/images/three_dots_icon.svg';
+
+
 export {
   AlertIcon,
   ExperimentIcon,
@@ -18,5 +22,7 @@ export {
   GearIcon,
   ChevronArrowIcon,
   SearchIcon,
-  AddPeopleIcon
+  AddPeopleIcon,
+  TopDownArrowIcon,
+  ThreeDotsIcon
 };
