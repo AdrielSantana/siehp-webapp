@@ -18,7 +18,7 @@ import { status_color } from "@/shared/infra/utils/constants/status_colors";
 
 const CustomTableRoot = ({ children, className, ...props }: TableRootProps) => {
   return (
-    <div className="relative w-full overflow-auto">
+    <div className="overflow-x-auto">
       <table
         className={`w-full caption-bottom text-sm ${className ?? ""}`}
         {...props}
@@ -82,7 +82,7 @@ const CustomTableHead = ({ children, className, ...props }: TableHeadProps) => {
   return (
     <div className="flex flex-row ">
       <th
-        className={` px-2 text-left text-[1rem] font-regular text-gray-900-tk ${className ?? ""}`}
+        className={`text-left text-[1rem] font-regular text-gray-900 ${className ?? ""}`}
         {...props}
       >
         {children}
@@ -95,7 +95,7 @@ const CustomTableHead = ({ children, className, ...props }: TableHeadProps) => {
 const CustomTableCell = ({ children, className, ...props }: TableCellProps) => {
   return (
     <td
-      className={`text-regular p-2 text-left align-middle text-[1rem] text-gray-900-tk ${className ?? ""}`}
+      className={`text-regular py-2 text-left align-middle text-[1rem] text-gray-900 ${className ?? ""}`}
       {...props}
     >
       {children}
@@ -112,7 +112,7 @@ const CustomTableCellStatus = ({
   return (
     <div className={` ${className ?? ""}`}>
       <div
-        className={`py-0.25  my-1.5 h-[1.75rem] w-min items-center justify-center rounded-[0.25rem] border-[2px] bg-gray-100-tk px-0.5 text-center text-[1rem] text-gray-900-tk border-sucess`}
+        className={`py-0.25  my-1.5 h-[1.75rem] min-w-[67px] w-min items-center justify-center rounded-[0.25rem] border-[2px] bg-gray-100- px-0.5 text-center text-[1rem] text-gray-900 border-sucess`}
         {...props}
       >
         {children}
@@ -128,7 +128,7 @@ const CustomTableCellButton = ({
 }: TableCellButtonProps) => {
   return (
     <button
-      className={` mx-1.5 my-1 h-2.5 w-auto items-center justify-center rounded-[0.25rem] bg-gray-700-tk px-1.5 py-0.5 text-[1rem] font-regular text-gray-900-tk ${className ?? ""}`}
+      className={` mx-1.5 my-1 h-2.5 w-auto items-center justify-center rounded-[0.25rem] bg-gray-700- px-1.5 py-0.5 text-[1rem] font-regular text-gray-900 ${className ?? ""}`}
       {...props}
     >
       {children}
