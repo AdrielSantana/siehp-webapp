@@ -14,18 +14,15 @@ import {
   TableCellMenuProps,
 } from "./types";
 import { ThreeDotsIcon, TopDownArrowIcon } from "../Icons";
-import { status_color } from "@/shared/infra/utils/constants/status_colors";
 
 const CustomTableRoot = ({ children, className, ...props }: TableRootProps) => {
   return (
-    <div className="overflow-x-auto">
       <table
         className={`w-full caption-bottom text-sm ${className ?? ""}`}
         {...props}
       >
         {children}
       </table>
-    </div>
   );
 };
 
@@ -35,7 +32,7 @@ const CustomTableHeader = ({
   ...props
 }: TableHeaderProps) => {
   return (
-    <thead className={`[&_tr]:border-b ${className ?? ""}`} {...props}>
+    <thead  className={`[&_tr]:border-b ${className ?? ""}`} {...props}>
       {children}
     </thead>
   );
@@ -43,7 +40,7 @@ const CustomTableHeader = ({
 
 const CustomTableBody = ({ children, className, ...props }: TableBodyProps) => {
   return (
-    <tbody
+    <tbody 
       className={`[&_tr:last-child]:border-0 ${className ?? ""}`}
       {...props}
     >
@@ -58,7 +55,7 @@ const CustomTableFooter = ({
   ...props
 }: TableFooterProps) => {
   return (
-    <tfoot
+    <tfoot 
       className={`bg-muted/50 font-medium border-t [&>tr]:last:border-b-0 ${className ?? ""}`}
       {...props}
     >
@@ -69,7 +66,7 @@ const CustomTableFooter = ({
 
 const CustomTableRow = ({ children, className, ...props }: TableRowProps) => {
   return (
-    <tr
+    <tr 
       className={` flex flex-wrap border-b transition-colors ${className ?? ""}`}
       {...props}
     >
@@ -80,21 +77,22 @@ const CustomTableRow = ({ children, className, ...props }: TableRowProps) => {
 
 const CustomTableHead = ({ children, className, ...props }: TableHeadProps) => {
   return (
-    <div className="flex flex-row ">
-      <th
-        className={`text-left text-[1rem] font-regular text-gray-900 ${className ?? ""}`}
+  
+      <th 
+        className={`flex flex-row text-left text-[1rem] font-regular text-gray-900 ml-[30px] ${className ?? ""}`}
         {...props}
       >
         {children}
+        <TopDownArrowIcon  onClick={() => {}} />
       </th>
-      <TopDownArrowIcon onClick={() => {}} />
-    </div>
+      
+
   );
 };
 
 const CustomTableCell = ({ children, className, ...props }: TableCellProps) => {
   return (
-    <td
+    <td 
       className={`text-regular py-2 text-left align-middle text-[1rem] text-gray-900 ${className ?? ""}`}
       {...props}
     >
@@ -110,8 +108,8 @@ const CustomTableCellStatus = ({
   ...props
 }: TableCellStatusProps) => {
   return (
-    <div className={` ${className ?? ""}`}>
-      <div
+    <div  className={` ${className ?? ""}`}>
+      <div 
         className={`py-0.25  my-1.5 h-[1.75rem] min-w-[67px] w-min items-center justify-center rounded-[0.25rem] border-[2px] bg-gray-100- px-0.5 text-center text-[1rem] text-gray-900 border-sucess`}
         {...props}
       >
@@ -127,7 +125,7 @@ const CustomTableCellButton = ({
   ...props
 }: TableCellButtonProps) => {
   return (
-    <button
+    <button 
       className={` mx-1.5 my-1 h-2.5 w-auto items-center justify-center rounded-[0.25rem] bg-gray-700- px-1.5 py-0.5 text-[1rem] font-regular text-gray-900 ${className ?? ""}`}
       {...props}
     >

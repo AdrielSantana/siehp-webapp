@@ -1,5 +1,6 @@
-import MakeProfessoresPage from "@/shared/infra/factories/pages/MakeProfessoresPage";
+import MakeProfessorsPage from "@/modules/admin/infra/factories/pages/MakeProfessorsPage";
+
 
 export default function AdminPage() {
-  return <MakeProfessoresPage/>;
+  return <MakeProfessorsPage/>;
 }
