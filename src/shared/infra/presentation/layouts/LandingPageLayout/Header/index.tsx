@@ -36,12 +36,12 @@ const Header = () => {
             </Link>
           </li>
           <li>
-            <Link href="/contact" className="text-gray-900-tk hover:text-gray-300">
+            <Link href="#" className="text-gray-900-tk hover:text-gray-300">
               Fale Conosco
             </Link>
           </li>
           <li>
-            <Link href="/about" className="text-gray-900-tk hover:text-gray-300">
+            <Link href="#" className="text-gray-900-tk hover:text-gray-300">
               Sobre Nós
             </Link>
           </li>
