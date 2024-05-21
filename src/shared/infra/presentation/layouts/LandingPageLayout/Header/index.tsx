@@ -15,6 +15,10 @@ const Header = () => {
     return LANDING_PAGE_NAVBAR_LINKS.includes(page as PagesEnum);
   }) as PagesEnum[];
 
+  const navbarLinks = navbarLinkKeys.map((link) => {
+    return PAGES[link];
+  });
+
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -78,7 +82,7 @@ const Header = () => {
         </div>
       </nav>
       {isOpen && (
-        <ul className="md:hidden flex flex-col space-y-2 absolute top-[113px] left-[0] w-full bg-gray-700 z-10">
+        <ul className="md:hidden flex flex-col space-y-2 absolute top-[105px] left-[0] w-full bg-gray-700 z-10">
           <li className="px-[16px] py-[8px] m-[0]">
             <Link href="/" className="text-gray-900-tk hover:text-gray-300">
               Home
