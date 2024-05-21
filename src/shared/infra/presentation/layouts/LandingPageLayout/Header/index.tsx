@@ -1,3 +1,5 @@
+"use client"
+
 import Image from "next/image";
 import completeSIEHPLogoImg from "@/shared/infra/presentation/assets/images/complete_siehp_logo.png";
 import {
@@ -6,6 +8,7 @@ import {
 } from "@/shared/infra/utils/constants";
 import Link from "next/link";
 import { PagesEnum } from "@/shared/infra/utils/types";
+import { useState } from "react";
 
 const Header = () => {
   const navbarLinkKeys = Object.keys(PAGES).filter((page) => {
@@ -15,6 +18,12 @@ const Header = () => {
   const navbarLinks = navbarLinkKeys.map((link) => {
     return PAGES[link];
   });
+
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const handleMenuToggle = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
 
   return (
     <header className="flex flex-row items-center justify-between gap-3 bg-gray-700 px-2 py-1.5 md:px-4">
@@ -27,7 +36,7 @@ const Header = () => {
           width={completeSIEHPLogoImg.width}
         />
       </Link>
-      <nav className="hidden md:block">
+      {/* <nav className="hidden md:block">
         <ul className="flex flex-row gap-x-3 text-lg font-semi-bold text-gray-100">
           {navbarLinks.map((navbarLink, idx) => {
             const { label, link } = navbarLink;
@@ -38,6 +47,24 @@ const Header = () => {
             );
           })}
         </ul>
+      </nav> */}
+      <nav className="flex-grow md:flex md:items-center md:w-auto">
+        <div className={`${isMenuOpen ? 'block' : 'hidden'} md:flex md:flex-row md:gap-3 text-lg font-semibold text-gray-100`}>
+          {navbarLinks.map((navbarLink, idx) => {
+            const { label, link } = navbarLink;
+            return (
+              <Link href={link} key={`${link}-${idx}`} className="block py-3 px-4 text-center hover:bg-gray-200 hover:text-black">
+                {label}
+              </Link>
+            );
+          })}
+        </div>
+        <button
+          onClick={handleMenuToggle}
+          className="md:hidden text-gray-200 hover:text-white focus:outline-none focus:text-white"
+        >
+          <i className="fa fa-bars text-2xl"></i>
+        </button>
       </nav>
     </header>
   );
