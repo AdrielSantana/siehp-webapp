@@ -34,7 +34,7 @@ const LoginPage = () => {
             >
               E-mail<span className="font-semi-bold text-warning">*</span>
             </Form.Label>
-            <div className="relative">
+            <div className="relative min-h-[85px]">
               <Form.Control asChild>
                 <input
                   id="email"
@@ -67,7 +67,7 @@ const LoginPage = () => {
             >
               Senha<span className="font-semi-bold text-warning">*</span>
             </Form.Label>
-            <div className="relative">
+            <div className="relative min-h-[85px]">
               <Form.Control asChild>
                 <input
                   id="password"
