@@ -22,7 +22,7 @@ const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header className="flex flex-row items-center justify-between gap-3 bg-gray-700 px-2 py-1.5 md:px-4">
+    <header className="flex flex-row items-center justify-between gap-3 bg-gray-700 px-[32px] py-1.5">
       <Link href={PAGES.HOME_PAGE.link}>
         <Image
           priority
@@ -35,17 +35,17 @@ const Header = () => {
       <nav className="flex items-center">
         <ul className="hidden md:flex space-x-4">
           <li>
-            <Link href="/" className="text-gray-900-tk hover:text-gray-300">
+            <Link href="/" className="text-gray-900-tk text-lg font-semi-bold hover:text-gray-300">
               Home
             </Link>
           </li>
           <li>
-            <Link href="#" className="text-gray-900-tk hover:text-gray-300">
+            <Link href="#" className="text-gray-900-tk text-lg font-semi-bold hover:text-gray-300">
               Fale Conosco
             </Link>
           </li>
           <li>
-            <Link href="#" className="text-gray-900-tk hover:text-gray-300">
+            <Link href="#" className="text-gray-900-tk text-lg font-semi-bold hover:text-gray-300">
               Sobre Nós
             </Link>
           </li>
@@ -84,17 +84,17 @@ const Header = () => {
       {isOpen && (
         <ul className="md:hidden flex flex-col space-y-2 absolute top-[105px] left-[0] w-full bg-gray-700 z-10">
           <li className="px-[16px] py-[8px] m-[0]">
-            <Link href="/" className="text-gray-900-tk hover:text-gray-300">
+            <Link href="/" className="text-gray-900-tk text-md font-semi-bold hover:text-gray-300 hover:0 7px 20px 5px #fff">
               Home
             </Link>
           </li>
           <li className="px-[16px] py-[8px] m-[0]">
-            <Link href="#" className="text-gray-900-tk hover:text-gray-300">
+            <Link href="#" className="text-gray-900-tk text-md font-semi-bold hover:text-gray-300">
               Fale Conosco
             </Link>
           </li>
           <li className="px-[16px] py-[8px] mb-[25px]">
-            <Link href="#" className="text-gray-900-tk hover:text-gray-300">
+            <Link href="#" className="text-gray-900-tk text-md font-semi-bold hover:text-gray-300">
               Sobre Nós
             </Link>
           </li>
