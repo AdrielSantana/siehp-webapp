@@ -1,31 +1,11 @@
-import { Roboto } from "next/font/google";
-import { Analytics } from "@vercel/analytics/react";
-import { SpeedInsights } from "@vercel/speed-insights/next";
 export * from "./metadata";
 import "./global.css";
-
-const roboto = Roboto({
-  weight: ["300", "400", "500", "700"],
-  subsets: ["latin", "latin-ext"],
-  style: ["italic", "normal"],
-  preload: true,
-  adjustFontFallback: true,
-  display: "swap",
-  variable: "--font-roboto",
-});
+import MakeAppLayout from "@/shared/infra/factories/layouts/MakeAppLayout";
 
 export default function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
-  return (
-    <html lang="pt-br" data-theme="normal">
-      <body className={`${roboto.className}`}>
-        {children}
-        <Analytics />
-        <SpeedInsights />
-      </body>
-    </html>
-  );
+  return <MakeAppLayout>{children}</MakeAppLayout>;
 }
