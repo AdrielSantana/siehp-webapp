@@ -1,4 +1,4 @@
-import LoginPage from "../page";
+import LoginPage from "../../presentation/pages/LoginPage";
 
 const MakeLoginPage = () => {
   return <LoginPage />;
