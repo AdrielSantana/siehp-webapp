@@ -1,5 +1,13 @@
 import React from "react";
-import { AdminPagesHeaderRootProps, AdminPagesHeaderTitleProps, AdminPagesHeaderButtonProps, AdminPagesHeaderFilterProps, AdminPagesHeaderButtonIconProps, AdminPagesHeaderButtonContentProps, AdminPagesHeaderBodyProps } from "./types";
+import {
+  AdminPagesHeaderRootProps,
+  AdminPagesHeaderTitleProps,
+  AdminPagesHeaderButtonProps,
+  AdminPagesHeaderFilterProps,
+  AdminPagesHeaderButtonIconProps,
+  AdminPagesHeaderButtonContentProps,
+  AdminPagesHeaderBodyProps,
+} from "./types";
 import { SearchIcon } from "../Icons";
 
 const AdminPagesHeaderRoot = ({
@@ -9,7 +17,7 @@ const AdminPagesHeaderRoot = ({
 }: AdminPagesHeaderRootProps) => {
   return (
     <div
-      className={`w-100% h-2.5 flex flex-wrap  mt-[4.25rem] mb-1.5 items-center content-center mx-4 ${className ?? ""}`}
+      className={`w-100% mx-4 mb-1.5 mt-[4.25rem]  flex h-2.5 flex-wrap content-center items-center ${className ?? ""}`}
       {...props}
     >
       {children}
@@ -24,7 +32,7 @@ const AdminPagesHeaderTitle = ({
 }: AdminPagesHeaderTitleProps) => {
   return (
     <h1
-      className={`text-gray-900-tk text-[1.5rem] font-semi-bold left-0 ${className ?? ""}`}
+      className={`left-0 text-[1.5rem] font-semi-bold text-gray-900-tk ${className ?? ""}`}
       {...props}
     >
       {children}
@@ -32,46 +40,78 @@ const AdminPagesHeaderTitle = ({
   );
 };
 
-const AdminPagesHeaderBody = ({ children, className, ...props }: AdminPagesHeaderBodyProps) => {
-  return (<div className={`flex flex-grow justify-end items-center ${className ?? ""}`} {...props}>
-    {children}
-  </div>);
-}
+const AdminPagesHeaderBody = ({
+  children,
+  className,
+  ...props
+}: AdminPagesHeaderBodyProps) => {
+  return (
+    <div
+      className={`flex flex-grow items-center justify-end ${className ?? ""}`}
+      {...props}
+    >
+      {children}
+    </div>
+  );
+};
 
-const AdminPagesHeaderButtonContent = ({ children, className, ...props }: AdminPagesHeaderButtonContentProps) => {
+const AdminPagesHeaderButtonContent = ({
+  children,
+  className,
+  ...props
+}: AdminPagesHeaderButtonContentProps) => {
   return (
     <div className={`flex flex-wrap ${className ?? ""}`} {...props}>
       {children}
     </div>
-  )
-}
-
-const AdminPagesHeaderButton = ({ children, className, ...props }: AdminPagesHeaderButtonProps) => {
-  return (
-    <button className={`mr-4 ${className ?? ""}`} {...props}>{children}</button>
   );
-}
+};
 
-const AdminPagesHeaderButtonIcon = ({ children, className, ...props }: AdminPagesHeaderButtonIconProps) => {
-  return (<div className={`w-1 h-[1.125rem] mr-1  ${className ?? ""}`} {...props}>
-    {children}
-  </div>)
-}
+const AdminPagesHeaderButton = ({
+  children,
+  className,
+  ...props
+}: AdminPagesHeaderButtonProps) => {
+  return (
+    <button className={`mr-4 ${className ?? ""}`} {...props}>
+      {children}
+    </button>
+  );
+};
 
-const AdminPagesHeaderFilter = ({ className, ...props }: AdminPagesHeaderFilterProps) => {
+const AdminPagesHeaderButtonIcon = ({
+  children,
+  className,
+  ...props
+}: AdminPagesHeaderButtonIconProps) => {
+  return (
+    <div className={`mr-1 h-[1.125rem] w-1  ${className ?? ""}`} {...props}>
+      {children}
+    </div>
+  );
+};
+
+const AdminPagesHeaderFilter = ({
+  className,
+  ...props
+}: AdminPagesHeaderFilterProps) => {
   return (
     <div className="relative">
       <input
         type="text"
         placeholder="Pesquisar..."
         {...props}
-        className={`rounded-[4rem] h-2.5 w-[15rem] bg-gray-700-tk pl-1 pr-[45px] py-[0.7rem] appearance-none border-none text-gray-100-tk text-1 placeholder-gray-100-tk placeholder-1  ${className ?? ""}`}
+        className={`text-1 placeholder-1 h-2.5 w-[15rem] appearance-none rounded-[4rem] border-none bg-gray-700-tk py-[0.7rem] pl-1 pr-[45px] text-gray-100-tk placeholder-gray-100-tk  ${className ?? ""}`}
       />
-      <SearchIcon className="[&>path]:fill-gray-300-tk absolute top-[6px] right-[15px]" width={24} height={24} viewBox="0 0 30 24" />
+      <SearchIcon
+        className="absolute right-[15px] top-[6px] [&>path]:fill-gray-300-tk"
+        width={24}
+        height={24}
+        viewBox="0 0 30 24"
+      />
     </div>
-
-  )
-}
+  );
+};
 
 export const AdminPagesHeader = {
   Root: AdminPagesHeaderRoot,
@@ -80,5 +120,5 @@ export const AdminPagesHeader = {
   Button: AdminPagesHeaderButton,
   ButtonIcon: AdminPagesHeaderButtonIcon,
   Filter: AdminPagesHeaderFilter,
-  ButtonContent: AdminPagesHeaderButtonContent
+  ButtonContent: AdminPagesHeaderButtonContent,
 };

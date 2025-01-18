@@ -3,11 +3,24 @@
 import { AdminPagesHeader } from "../../../../../../../shared/infra/presentation/components/AdminPagesHeader";
 import { CustomTable } from "../../../../../../../shared/infra/presentation/components/CustomTable";
 import { AddPeopleIcon } from "../../../../../../../shared/infra/presentation/components/Icons";
+import { useState } from "react";
+import { Modal } from "@/shared/infra/presentation/components/ModalRegistration";
 
 const ProfessorsPage = ({}) => {
+  const [open, setOpen] = useState<boolean>(false);
+
+  const handleOpenModal = () => {
+    setOpen(true);
+  };
+
+  const handleCloseModal = () => {
+    setOpen(false);
+  };
+
   return (
     <>
       {/* exemplo, remover quando dor fazer integração */}
+      <Modal isOpen={open} onClose={handleCloseModal}></Modal>
       <AdminPagesHeader.Root>
         <AdminPagesHeader.Title>Professores</AdminPagesHeader.Title>
         <AdminPagesHeader.Body>
@@ -15,7 +28,7 @@ const ProfessorsPage = ({}) => {
             <AdminPagesHeader.ButtonIcon>
               <AddPeopleIcon className={`[&>path]:fill-gray-900-tk`} />
             </AdminPagesHeader.ButtonIcon>
-            <AdminPagesHeader.Button>
+            <AdminPagesHeader.Button onClick={handleOpenModal}>
               Adicionar Professor
             </AdminPagesHeader.Button>
           </AdminPagesHeader.ButtonContent>
@@ -23,7 +36,7 @@ const ProfessorsPage = ({}) => {
         </AdminPagesHeader.Body>
       </AdminPagesHeader.Root>
       {/* exemplo, remover quando dor fazer integração */}
-      <CustomTable.Root >
+      <CustomTable.Root>
         <CustomTable.Header>
           <CustomTable.Row>
             <CustomTable.Head className="min-w-[175px] ">
