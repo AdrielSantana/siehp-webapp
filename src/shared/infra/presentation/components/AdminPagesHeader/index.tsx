@@ -70,7 +70,6 @@ const AdminPagesHeaderButtonContent = ({
 const AdminPagesHeaderButton = ({
   children,
   className,
-  handleClick,
   ...props
 }: AdminPagesHeaderButtonProps) => {
   return (
